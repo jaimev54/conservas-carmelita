@@ -16,10 +16,10 @@
   async function ensureProducts(){
     if(Array.isArray(window.__PRODUCTS__) && window.__PRODUCTS__.length) return;
     try{
-      const r = await fetch('/data/products.json', { cache:'no-store' });
+        const r = await fetch('data/products.json', { cache:'no-store' });
       window.__PRODUCTS__ = await r.json();
     }catch(e){
-      console.error('No pude cargar /data/products.json', e);
+        console.error('No pude cargar data/products.json', e);
       window.__PRODUCTS__ = [];
     }
   }
@@ -50,7 +50,7 @@
              alt="${p.name}"
              loading="lazy"
              decoding="async"
-             onerror="if(!this.dataset.fallback){ this.dataset.fallback=1; this.src='/assets/img/placeholder.jpg'; }" />
+               onerror="if(!this.dataset.fallback){ this.dataset.fallback=1; this.src='assets/img/placeholder.jpg'; }" />
         <h3>${p.name}</h3>
         <div class="card__meta">${p.unit} • ${money(p.price)}</div>
         <div style="display:flex;gap:10px;align-items:center">
@@ -124,7 +124,7 @@
       const card=document.createElement('article'); card.className='card';
       card.innerHTML=`
         <img class="card__img" src="${p.image}" alt="${p.name}" loading="lazy" decoding="async"
-             onerror="if(!this.dataset.fallback){ this.dataset.fallback=1; this.src='/assets/img/placeholder.jpg'; }" />
+               onerror="if(!this.dataset.fallback){ this.dataset.fallback=1; this.src='assets/img/placeholder.jpg'; }" />
         <h3>${p.name}</h3>
         <div class="card__meta">${p.unit} • ${money(p.price)}</div>`;
       featured.appendChild(card);
