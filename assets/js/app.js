@@ -115,7 +115,12 @@
     const msg=buildWhatsAppMessage(); if(!msg) return;
     const url=`https://wa.me/${window.__WA_NUMBER__}?text=${msg}`; window.open(url,'_blank');
   }
-  window.openWhatsAppFromContact = openWhatsApp;
+
+  function openWhatsAppFromContact(){
+    const url=`https://wa.me/${window.__WA_NUMBER__}`;
+    window.open(url,'_blank');
+  }
+  window.openWhatsAppFromContact = openWhatsAppFromContact;
 
   function renderFeatured(){
     const featured=$('#featured'); if(!featured || !window.__PRODUCTS__) return;
