@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Productos • Conservas Carmelita</title>
+  <meta name="description" content="Catálogo de productos Conservas Carmelita" />
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="/" class="brand">
+        <img src="/assets/img/logo.jpg" alt="Conservas Carmelita" class="brand__logo">
+        <span class="brand__title">Conservas Carmelita</span>
+      </a>
+      <div class="nav__links">
+        <a href="/productos.html">Productos</a>
+        <a href="/carrito.html">Carrito <span id="navCartCount" class="pill">0</span></a>
+        <a href="/contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <header class="section__head">
+      <h1>Catálogo</h1>
+      <div class="filters">
+        <input id="searchInput" class="input" type="search" placeholder="Buscar producto...">
+        <select id="categoryFilter" class="select">
+          <option value="">Todas las categorías</option>
+          <!-- las categorías se filtran por texto; si quieres opciones fijas, puedes ponerlas aquí -->
+        </select>
+        <button type="button" id="clearFilters" class="btn btn--ghost">Limpiar</button>
+      </div>
+    </header>
+
+    <section id="catalog" class="grid"></section>
+  </main>
+
+  <footer class="footer"><div class="container">© <span id="year"></span> Conservas Carmelita</div></footer>
+
+  <script>window.__WA_NUMBER__='526741160091'</script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>

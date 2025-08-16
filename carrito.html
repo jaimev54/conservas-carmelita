@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Carrito • Conservas Carmelita</title>
+  <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <a href="/" class="brand">
+        <img src="/assets/img/logo.jpg" alt="Conservas Carmelita" class="brand__logo">
+        <span class="brand__title">Conservas Carmelita</span>
+      </a>
+      <div class="nav__links">
+        <a href="/productos.html">Productos</a>
+        <a href="/carrito.html">Carrito <span id="navCartCount" class="pill">0</span></a>
+        <a href="/contacto.html">Contacto</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Tu carrito</h1>
+    <div id="cartList" class="cartlist"></div>
+    <div class="cart__summary">
+      <strong id="cartTotal">Total: $0.00</strong>
+      <button id="sendCart" class="btn btn--green">Enviar por WhatsApp</button>
+    </div>
+  </main>
+
+  <footer class="footer"><div class="container">© <span id="year"></span> Conservas Carmelita</div></footer>
+
+  <script>window.__WA_NUMBER__='52674116091'</script>
+  <script src="/assets/js/app.js"></script>
+</body>
+</html>
