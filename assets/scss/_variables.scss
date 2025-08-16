@@ -1,0 +1,23 @@
+// Paleta y design tokens
+$green:        #1e7f3b;
+$green-600:    #176532;
+$green-100:    #eaf6ee;
+$bg:           #ffffff;
+$text:         #1f2937;
+$muted:        #6b7280;
+
+$radius:       16px;
+$shadow:       0 8px 24px rgba(0,0,0,.08);
+$container:    1100px;
+
+// Exportar como CSS variables para uso en JS o temas
+:root{
+  --green:#{$green};
+  --green-600:#{$green-600};
+  --green-100:#{$green-100};
+  --bg:#{$bg};
+  --text:#{$text};
+  --muted:#{$muted};
+  --radius:#{$radius};
+  --shadow:#{$shadow};
+}

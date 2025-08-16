@@ -1,0 +1,9 @@
+@use 'variables' as v;
+
+html, body{
+  font-family: Poppins, system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+a{ color: var(--green); text-decoration: none; }

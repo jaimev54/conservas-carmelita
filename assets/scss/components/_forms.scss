@@ -1,0 +1,16 @@
+.input, .select{
+  padding: 10px 12px;
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+
+.qty{
+  display:flex; align-items:center; border:1px solid #e5e7eb; border-radius:10px; overflow:hidden;
+
+  input{
+    width:56px; text-align:center; border:0; padding:10px 6px; outline:none;
+  }
+  button{
+    border:0; background:#f3f4f6; padding:10px 12px; cursor:pointer;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "conservas-carmelita",
+  "version": "1.0.0",
+  "description": "Catálogo web de Conservas Carmelita con PHP, SCSS y WhatsApp",
+  "main": "index.js",
+  "scripts": {
+    "dev": "gulp",
+    "build": "gulp build"
+  },
+  "author": "Conservas Carmelita",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.29.3",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.90.0"
+  },
+  "keywords": []
+}

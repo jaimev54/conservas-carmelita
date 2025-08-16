@@ -1,0 +1,9 @@
+.cartlist{ display:flex; flex-direction:column; gap:10px; }
+
+.cartlist__row{
+  display:grid; grid-template-columns:1fr auto auto auto; align-items:center; gap:10px;
+}
+
+.cart__summary{
+  display:flex; justify-content:space-between; align-items:center; margin-top:12px;
+}

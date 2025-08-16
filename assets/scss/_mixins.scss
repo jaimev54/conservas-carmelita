@@ -1,0 +1,42 @@
+@use 'variables' as v;
+
+// Breakpoints
+$bp-lg: 1024px;
+$bp-md: 768px;
+$bp-sm: 520px;
+
+@mixin container {
+  max-width: v.$container;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+@mixin shadow { box-shadow: var(--shadow); }
+
+@mixin btn-base {
+  cursor: pointer; border: 0; border-radius: 12px;
+  padding: 10px 14px; font-weight: 600;
+}
+
+@mixin grid-columns($count) {
+  display: grid;
+  grid-template-columns: repeat($count, 1fr);
+  gap: 18px;
+}
+
+@mixin respond($break) {
+  @if $break == lg { @media (max-width: $bp-lg) { @content; } }
+  @else if $break == md { @media (max-width: $bp-md) { @content; } }
+  @else if $break == sm { @media (max-width: $bp-sm) { @content; } }
+}
+
+// Breakpoints
+$bp-lg: 1024px;
+$bp-md: 768px;
+$bp-sm: 520px;
+
+@mixin respond($bp) {
+  @if $bp == lg { @media (max-width: $bp-lg) { @content; } }
+  @else if $bp == md { @media (max-width: $bp-md) { @content; } }
+  @else if $bp == sm { @media (max-width: $bp-sm) { @content; } }
+}

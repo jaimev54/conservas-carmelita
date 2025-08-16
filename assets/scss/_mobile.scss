@@ -1,0 +1,95 @@
+@use 'mixins';
+
+// Tipografía fluida y espaciados
+html { font-size: clamp(15px, 2.5vw, 16px); }
+.section { margin: 18px 0; }
+
+// Header / Nav
+.header { position: sticky; top: 0; background: #fff; }
+.nav {
+  padding: 10px 0;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.brand__logo { height: 40px; width: auto; }
+.brand__title { font-size: 1.05rem; }
+
+// En móviles, acomoda links abajo del logo
+@media (max-width: 600px) {
+  .nav { flex-direction: column; align-items: flex-start; }
+  .nav__links { width: 100%; display: flex; gap: 10px; flex-wrap: wrap; }
+  .nav__links a { padding: 8px 10px; border-radius: 10px; background: #f8fafc; }
+}
+
+// Grid de productos (1 columna en móvil, menos gap)
+.grid { gap: 14px; }
+@include mixins.respond(md) { .grid { gap: 16px; } }
+@include mixins.respond(sm) { .grid { grid-template-columns: 1fr; gap: 12px; } }
+
+// Tarjeta de producto
+.card {
+  padding: 12px;
+}
+.card__img {
+  aspect-ratio: 1/1; // cuadrado en móvil para mejor recorte
+  border-radius: 12px;
+}
+.card h3 { font-size: 1rem; margin: 6px 0 4px; }
+.card__meta { font-size: .9rem; }
+
+// Controles (qty + botón) apilados en móvil
+@media (max-width: 520px) {
+  .card > div[style*="display:flex"] {
+    flex-direction: column;
+    align-items: stretch !important;
+    gap: 8px !important;
+  }
+  .qty {
+    width: 100%;
+    justify-content: space-between;
+  }
+  .qty input { width: 100%; max-width: 100%; }
+  .btn { width: 100%; padding: 12px 16px; }
+}
+
+// Botones: objetivo táctil cómodo
+.btn { min-height: 42px; }
+
+// Inputs / selects cómodos al dedo
+.input, .select {
+  padding: 12px 12px;
+  min-height: 42px;
+  width: 100%;
+}
+
+// Filtros arriba del catálogo
+.filters {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 10px;
+  margin: 10px 0 18px;
+}
+@media (max-width: 640px) {
+  .filters { grid-template-columns: 1fr; }
+  #clearFilters { width: 100%; }
+}
+
+// Carrito: filas más sencillas en móvil
+.cartlist__row {
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+}
+.cartlist__row > div:nth-child(3) { // total por renglón
+  grid-column: 2 / 3; justify-self: end;
+}
+.cartlist__row > button { // eliminar
+  grid-column: 2 / 3; justify-self: end;
+}
+@media (min-width: 600px) {
+  .cartlist__row {
+    grid-template-columns: 1fr auto auto auto;
+  }
+}
+
+// Footer más compacto
+.footer { margin: 28px 0 60px; font-size: .95rem; }

@@ -1,0 +1,7 @@
+@use 'mixins';
+
+.grid { @include mixins.grid-columns(4); }
+
+@include mixins.respond(lg) { .grid{ @include mixins.grid-columns(3); } }
+@include mixins.respond(md) { .grid{ @include mixins.grid-columns(2); } }
+@include mixins.respond(sm) { .grid{ @include mixins.grid-columns(1); } }

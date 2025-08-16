@@ -1,0 +1,49 @@
+@use 'mixins';
+
+.btn{ @include mixins.btn-base; }
+
+.btn--green{
+  background: var(--green); color: #fff;
+  &:hover{ background: var(--green-600); }
+}
+
+.btn--ghost{
+  background: transparent; border: 1px solid #e5e7eb;
+}
+
+/* Animación corta tipo “bump” */
+@keyframes cc-bump {
+  0%   { transform: scale(1); }
+  20%  { transform: scale(1.06); }
+  100% { transform: scale(1); }
+}
+
+/* Estado temporal cuando se agrega */
+.btn--green.btn--added{
+  background: var(--green-600);
+  position: relative;
+  animation: cc-bump .35s ease;
+}
+
+/* Icono ✓ animado */
+.btn--green.btn--added::after{
+  content: "✓";
+  display: inline-block;
+  margin-left: 8px;
+  transform: scale(0.6);
+  opacity: 0;
+  animation: cc-check-in .35s ease forwards;
+}
+
+@keyframes cc-check-in {
+  from { transform: scale(0.6); opacity: 0; }
+  to   { transform: scale(1);   opacity: 1; }
+}
+
+/* (Opcional) desactivar hover mientras está en “added” */
+.btn--green.btn--added:hover{
+  background: var(--green-600);
+}
+
+/* (Opcional) cursor bloqueado mientras está deshabilitado */
+button:disabled{ cursor: not-allowed; opacity: .85; }
