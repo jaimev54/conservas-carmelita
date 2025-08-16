@@ -5,7 +5,7 @@
     "name": "Chamoy",
     "price": 35.00,
     "unit": "frasco",
-    "image": "/assets/img/chamoy.jpg",
+    "image": "assets/img/chamoy.jpg",
     "category": "Salsas"
   },
   {
@@ -14,7 +14,7 @@
     "name": "Cortadillo de Membrillo",
     "price": 40.00,
     "unit": "pieza",
-    "image": "/assets/img/cortadillo_de_membrillo.jpg",
+    "image": "assets/img/cortadillo_de_membrillo.jpg",
     "category": "Dulces"
   },
   {
@@ -23,7 +23,7 @@
     "name": "Escuinkles de Nopal",
     "price": 25.00,
     "unit": "bolsa",
-    "image": "/assets/img/escuinkles_de_nopal.jpg",
+    "image": "assets/img/escuinkles_de_nopal.jpg",
     "category": "Botanas"
   },
   {
@@ -32,7 +32,7 @@
     "name": "Mermelada de Higo",
     "price": 50.00,
     "unit": "frasco",
-    "image": "/assets/img/mermelada_de_higo.jpg",
+    "image": "assets/img/mermelada_de_higo.jpg",
     "category": "Mermeladas"
   },
   {
@@ -41,7 +41,7 @@
     "name": "Mermelada de Higo Natural",
     "price": 55.00,
     "unit": "frasco",
-    "image": "/assets/img/mermelada_de_higo_nat.jpg",
+    "image": "assets/img/mermelada_de_higo_nat.jpg",
     "category": "Mermeladas"
   },
   {
@@ -50,7 +50,7 @@
     "name": "Mermelada de Mango",
     "price": 45.00,
     "unit": "frasco",
-    "image": "/assets/img/mermelada_de_mango.jpg",
+    "image": "assets/img/mermelada_de_mango.jpg",
     "category": "Mermeladas"
   }
 ]

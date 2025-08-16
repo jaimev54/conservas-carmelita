@@ -7,6 +7,6 @@
   <script>
     window.__WA_NUMBER__ = '<?= $WHATSAPP_NUMBER ?>';
   </script>
-  <script src="/assets/js/app.js"></script>
+  <script src="assets/js/app.js"></script>
 </body>
 </html>

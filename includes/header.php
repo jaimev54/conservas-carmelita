@@ -9,14 +9,14 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
   <style>:root{ --green: <?= $COLOR_MAIN ?>; }</style>
 </head>
 <body>
   <header class="header">
     <nav class="nav container">
       <a href="/" class="brand">
-    <img src="/assets/img/logo.jpg" alt="Conservas Carmelita" class="brand__logo">
+    <img src="assets/img/logo.jpg" alt="Conservas Carmelita" class="brand__logo">
     <span class="brand__title">Conservas Carmelita</span>
       </a>
       <div class="nav__links">
